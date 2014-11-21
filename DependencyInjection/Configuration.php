@@ -13,7 +13,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
-    protected $supportedDbDrivers = array('orm', 'mongodb', 'propel', 'phpcr');
+    protected $supportedDbDrivers = array('orm', 'mongodb', 'propel', 'propel2', 'phpcr');
 
     /**
      * Gets the configuration tree builder for the extension.

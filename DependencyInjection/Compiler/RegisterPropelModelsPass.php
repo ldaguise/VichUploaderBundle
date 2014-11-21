@@ -33,7 +33,7 @@ class RegisterPropelModelsPass implements CompilerPassInterface
             foreach ($metadata->getUploadableFields($class) as $field) {
                 $mapping = $mappings[$field['mapping']];
 
-                if ($mapping['db_driver'] !== 'propel') {
+                if (!in_array($mapping['db_driver'], array('propel', 'propel2'))) {
                     continue;
                 }
 
